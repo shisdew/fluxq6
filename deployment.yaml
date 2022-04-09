@@ -2,20 +2,20 @@
 IapiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myq2app
+  name: myq6app
 spec:
   replicas: 4
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: myq2app
+      app: myq6app
   template:
     metadata:
       labels:
-        app: myq2app
+        app: myq6app
     spec:
       containers:
-      - name: myq2app
+      - name: myq6app
         image: shisdew/fluxq6:latest
         ports:
         - containerPort: 8080
